@@ -1,0 +1,23 @@
+/*-----------------------FONTS_START-----------------------*/
+@font-face {
+    font-family: 'Gilroy';
+    src: local(''),
+        url('../fonts/Gilroy-Bold.woff2') format('woff2'),
+        url('../fonts/Gilroy-Bold.woff') format('woff'),
+        url('../fonts/Gilroy-Bold.ttf') format('truetype'),
+        url('../fonts/Gilroy-Bold.eot') format('embedded-opentype');
+    font-weight: 700;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Gilroy';
+    src: local(''),
+        url('../fonts/Gilroy-Medium.woff2') format('woff2'),
+        url('../fonts/Gilroy-Medium.woff') format('woff'),
+        url('../fonts/Gilroy-Medium.ttf') format('truetype'),
+        url('../fonts/Gilroy-Bold.eot') format('embedded-opentype');
+    font-weight: 500;
+    font-style: normal;
+  }
+/*-----------------------FONTS_END-----------------------*/
+/*-----------------------STYLE_START-----------------------*/
