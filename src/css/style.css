@@ -45,6 +45,9 @@ p {
   margin-top: 0.5em; 
   margin-bottom: 1em; 
  }
+a{
+  text-decoration: none;
+}
 a.anchor {
   display: block;
   position: relative;
@@ -65,7 +68,6 @@ a.anchor {
   font-size: 18px;
   line-height: 22px;
   list-style-type: none;
-  text-decoration: none;
 }
 .header-bottom-menu__link {
   color: #828282;
