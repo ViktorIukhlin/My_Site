@@ -84,6 +84,10 @@ a.anchor {
 .whoiam {
 }
 .whoiam__name {
+  font-family: Gilroy-Bold;
+  font-size: 47.3392px;
+  line-height: 59px;
+  color: #070707;
 }
 .whoiam__about {
 }
