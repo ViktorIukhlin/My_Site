@@ -56,6 +56,10 @@ a.anchor {
 }
 /*-----------------------PRE_CONFIG_END-----------------------*/
 /*------------------------HEADER_START------------------------*/
+.container{
+  border-bottom: 1px solid #828282;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
 .header-bottom-menu {
   display: flex;
   flex-direction: row;
@@ -76,3 +80,26 @@ a.anchor {
   color: #070707;
 }
 /*-------------------------HEADER_END-------------------------*/
+/*------------------------WHOIAM_START------------------------*/
+.whoiam {
+}
+.whoiam__name {
+}
+.whoiam__about {
+}
+.whoiam__language {
+}
+.whoiam__eng {
+}
+.whoiam__rus {
+}
+.whoiam__image {
+  overflow: hidden;
+  height: 400px;
+}
+.whoiam__photo{
+  width: 100%;
+  margin: -45% 0 0 0;
+}
+ 
+/*------------------------WHOIAM_END------------------------*/
