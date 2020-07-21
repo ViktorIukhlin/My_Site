@@ -37,7 +37,7 @@ body{
   color: #000000;
 }
 .wrapper{
-  max-width: 1219px;
+  max-width: 940px;
   margin: 0 auto;
   padding: 0 55px;
 }
@@ -52,3 +52,25 @@ a.anchor {
   visibility: hidden;
 }
 /*-----------------------PRE_CONFIG_END-----------------------*/
+/*------------------------HEADER_START------------------------*/
+.header-bottom-menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 32px 0;
+}
+.header-body-menu__links{
+  font-family: Gilroy-Bold;
+  font-size: 18px;
+  line-height: 22px;
+  list-style-type: none;
+  text-decoration: none;
+}
+.header-bottom-menu__link {
+  color: #828282;
+}
+.header-bottom-menu__link_active{
+  color: #070707;
+}
+/*-------------------------HEADER_END-------------------------*/
