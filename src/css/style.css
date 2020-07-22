@@ -1,4 +1,4 @@
-/*-----------------------FONTS_START-----------------------*/
+/*-----------------------FONTS_BEGIN-----------------------*/
 @font-face {
     font-family: 'Gilroy-Bold';
     src: local(''),
@@ -20,7 +20,7 @@
     font-style: normal;
   }
 /*-----------------------FONTS_END-----------------------*/
-/*-----------------------PRE_CONFIG_START-----------------------*/
+/*-----------------------PRE_CONFIG_BEGIN-----------------------*/
 html{
   box-sizing: border-box;
 }
@@ -31,8 +31,8 @@ html{
 body{
   font-family: 'Gilroy-Medium', sans-serif;
   font-style: normal;
-  font-size: 16px;
-  line-height: 1.2;
+  font-size: 18px;
+  line-height: 22px;
   font-weight: normal;
   color: #000000;
 }
@@ -42,11 +42,17 @@ body{
   padding: 0 55px;
 }
 p {
-  margin-top: 0.5em; 
-  margin-bottom: 1em; 
+  margin-top: 1em; 
+  margin-bottom: 2em; 
  }
 a{
   text-decoration: none;
+}
+h2{
+  font-family: Gilroy-Bold;
+  font-size: 34px;
+  line-height: 42px;
+  color: #070707;
 }
 a.anchor {
   display: block;
@@ -55,7 +61,7 @@ a.anchor {
   visibility: hidden;
 }
 /*-----------------------PRE_CONFIG_END-----------------------*/
-/*------------------------HEADER_START------------------------*/
+/*------------------------HEADER_BEGIN------------------------*/
 .container{
   border-bottom: 1px solid #828282;
   transform: matrix(1, 0, 0, 1, 0, 0);
@@ -69,8 +75,6 @@ a.anchor {
 }
 .header-body-menu__links{
   font-family: Gilroy-Bold;
-  font-size: 18px;
-  line-height: 22px;
   list-style-type: none;
 }
 .header-bottom-menu__link {
@@ -80,8 +84,14 @@ a.anchor {
   color: #070707;
 }
 /*-------------------------HEADER_END-------------------------*/
-/*------------------------WHOIAM_START------------------------*/
+/*------------------------WHOIAM_BEGIN------------------------*/
 .whoiam {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  margin: 30px 0 104px;
+  align-items: flex-end;
 }
 .whoiam__name {
   font-family: Gilroy-Bold;
@@ -90,20 +100,45 @@ a.anchor {
   color: #070707;
 }
 .whoiam__about {
+  color: #070707;
 }
 .whoiam__language {
+  display: flex;
+  transform: rotate(-90deg);
+  margin: 45px -23px;
+  font-family: Gilroy-Bold;
+  font-size: 16px;
+  line-height: 20px;
 }
-.whoiam__eng {
+.whoiam__ru {
+  color: #828282;
 }
-.whoiam__rus {
+.whoiam__slesh {
+  margin: 0px 5px;
 }
 .whoiam__image {
+  margin: 30px 0 0px;
   overflow: hidden;
-  height: 400px;
+  height: 350px;
 }
 .whoiam__photo{
   width: 100%;
   margin: -45% 0 0 0;
 }
  
-/*------------------------WHOIAM_END------------------------*/
+/*------------------------WHOIAM_END-------------------------*/
+/*------------------------ABOUT_BEGIN------------------------*/
+.about__content {
+  width: 100%;
+  max-width: 100%;
+  background: #F6F6F6;
+  height: 506px;
+}
+.about__content-text {
+  padding: 120px 0;
+  width: 485px;
+  text-align: center;
+  color: #070707;
+  margin: 0 auto;
+}
+/*-------------------------ABOUT_END-------------------------*/
