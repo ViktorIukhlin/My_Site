@@ -142,25 +142,22 @@ a.anchor {
 }
 /*-------------------------ABOUT_END-------------------------*/
 /*-----------------------SKILLS_BEGIN------------------------*/
-.skills {
+.skills{
+  display: flex;
+  flex-wrap: wrap;
 }
-.skills__main {
-
+.skills__box {
 }
-.skills__skill {
+.skills__logo {
 }
-.skills__icon {
-  
-}
-.skills__icon-png{
-  height: 90px;
+.skills__svg {
+  height: 80px;
 }
 .skills__name {
+  text-align: center;
 }
-.skills__rang {
+.stars {
 }
-.skills__star {
+.skills_star {
 }
-.skills__star_active {
-}
-/*-----------------------SKILLS_END------------------------*/
+/*------------------------SKILLS_END-------------------------*/
