@@ -34,7 +34,7 @@ body{
   font-size: 18px;
   line-height: 22px;
   font-weight: normal;
-  color: #000000;
+  color: #070707;
 }
 .wrapper{
   max-width: 940px;
@@ -138,7 +138,29 @@ a.anchor {
   padding: 120px 0;
   width: 485px;
   text-align: center;
-  color: #070707;
   margin: 0 auto;
 }
 /*-------------------------ABOUT_END-------------------------*/
+/*-----------------------SKILLS_BEGIN------------------------*/
+.skills {
+}
+.skills__main {
+
+}
+.skills__skill {
+}
+.skills__icon {
+  
+}
+.skills__icon-png{
+  height: 90px;
+}
+.skills__name {
+}
+.skills__rang {
+}
+.skills__star {
+}
+.skills__star_active {
+}
+/*-----------------------SKILLS_END------------------------*/
