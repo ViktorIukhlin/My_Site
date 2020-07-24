@@ -142,22 +142,72 @@ a.anchor {
 }
 /*-------------------------ABOUT_END-------------------------*/
 /*-----------------------SKILLS_BEGIN------------------------*/
-.skills{
+.skills__heading{
+text-align: center;
+margin: 91px 0 0px;
+}
+.skills__heading p{
+  margin-top: 65px;
+  margin-bottom: 84px; 
+  }
+.skills__container{
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 .skills__box {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 110px;
+  flex-basis: 25%;
 }
 .skills__logo {
+  margin: 0 auto;
 }
 .skills__svg {
   height: 80px;
 }
 .skills__name {
+  font-family: Gilroy-Bold;
+  font-size: 14px;
+  line-height: 17px;
   text-align: center;
+  color: #828282;
 }
-.stars {
+.skills__stars {
+  margin: 0 auto;
 }
-.skills_star {
+.skills__star {
+  padding: 0 4px;
 }
 /*------------------------SKILLS_END-------------------------*/
+/*---------------------PORTFOLIO_BEGIN-----------------------*/
+.portfolio {
+  text-align: center;
+  background: #F6F6F6;
+  padding-top: 112px;
+  padding-bottom: 96px;
+}
+.portfolio__heading h2{
+}
+.portfolio__content {
+ 
+}
+.portfolio__blok {
+  margin-top: 99px;
+}
+.portfolio__blok:first-child {
+  margin-top: 50px;
+}
+.portfolio__img img{
+  width: 940px;
+  margin-bottom: 44px;
+}
+.portfolio__link a{
+  text-align: center;
+  text-decoration-line: underline;
+  color: #070707;
+}
+/*----------------------PORTFOLIO_END------------------------*/
+/*----------------------FOOTRE_END------------------------*/
+/*----------------------PORTFOLIO_END------------------------*/

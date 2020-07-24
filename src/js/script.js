@@ -1,30 +1,47 @@
 'use strict';
-const skills = document.querySelector('.skills');
+const skills = document.querySelector('.skills__container'),
+      portfolio = document.querySelector('.portfolio__content');
 
 const dataBase = {
+    //SKILS
     svgies: [
+        "Java Script",
+        "HTML",
         "CSS",
         "C++",
         "Figma",
-        "GIT",
-        "GITHUB",
-        "HTML",
+        "Git",
+        "GitHub",
         "IELTS",
-        "Java Script",
+        "",
         "Visual Studio",
-        "Visual Studio Code"
+        "Visual Studio Code",
+        ""
     ],
     stars: [
-        1,
+        3,
+        4,
+        4,
+        2,
+        4,
+        4,
         4,
         3,
-        2,
-        1,
-        1,
-        1,
+        '',
         4,
-        1,
-        1
+        4,
+        ''
+    ],
+    //PORTFOLIO
+    screens: [
+        "Coca Cola",
+        "Titans of cnc",
+        "Design blog"
+    ],
+    ScreensUrl: [
+        "https://www.coca-cola.ru/",
+        "https://academy.titansofcnc.com/",
+        "https://www.invisionapp.com/inside-design"
     ]
 };
 
@@ -43,13 +60,19 @@ const addSkills = (svgies, stars, parent) => {
                 </div>
         `;
         for(let i = 0; i < 5 ; i++){
+            if(stars[ir] == ''){
+                starslist += `
+                    <img src="" alt="" class="skills__star"></img>
+                    `;
+                    break;
+            }
             if(i < stars[ir]){
                 starslist += `
-                    <img src="/src/img/StarBlack.svg" alt="" class="skills__star">
+                    <img src="/src/img/StarBlack.svg" alt="star" class="skills__star">
                 `;
             }else{
                 starslist += `
-                    <img src="/src/img/Star.svg" alt="" class="skills__star">
+                    <img src="/src/img/Star.svg" alt="star" class="skills__star">
             `;}
         }
         starsblock += `<div class="skills__stars">
@@ -60,5 +83,21 @@ const addSkills = (svgies, stars, parent) => {
         </div>`;
     });
 };
+const addPortfolio = (img, url, parent) => {
+    parent.innerHTML = '';
 
+    img.forEach((item,i) => {
+        parent.innerHTML += `<div class="portfolio__blok">
+        
+            <div class="portfolio__img">
+                <img src="/src/img/Sites/${item}.jpg" alt="${item}">
+            </div>
+            <div class="portfolio__link">
+                <a href="${url[i]}">${item} - Homepage</a>
+            </div>
+
+        </div>`;
+    });
+};
 addSkills(dataBase.svgies, dataBase.stars, skills);
+addPortfolio(dataBase.screens, dataBase.ScreensUrl,portfolio);
