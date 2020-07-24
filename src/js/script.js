@@ -53,7 +53,7 @@ const addSkills = (svgies, stars, parent) => {
         let starslist = '';
         starsblock += `
                 <div class="skills__logo">
-                    <img src="/src/img/icons/${item}.svg" alt="${item}" class="skills__svg">
+                    <img src="src/img/icons/${item}.svg" alt="${item}" class="skills__svg">
                 </div>
                 <div class="skills__name">
                     <p>${item}</p>
@@ -68,11 +68,11 @@ const addSkills = (svgies, stars, parent) => {
             }
             if(i < stars[ir]){
                 starslist += `
-                    <img src="/src/img/StarBlack.svg" alt="star" class="skills__star">
+                    <img src="src/img/StarBlack.svg" alt="star" class="skills__star">
                 `;
             }else{
                 starslist += `
-                    <img src="/src/img/Star.svg" alt="star" class="skills__star">
+                    <img src="src/img/Star.svg" alt="star" class="skills__star">
             `;}
         }
         starsblock += `<div class="skills__stars">
@@ -90,7 +90,7 @@ const addPortfolio = (img, url, parent) => {
         parent.innerHTML += `<div class="portfolio__blok">
         
             <div class="portfolio__img">
-                <img src="/src/img/Sites/${item}.jpg" alt="${item}">
+                <img src="src/img/Sites/${item}.jpg" alt="${item}">
             </div>
             <div class="portfolio__link">
                 <a href="${url[i]}">${item} - Homepage</a>
