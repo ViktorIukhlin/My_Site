@@ -188,11 +188,6 @@ margin: 91px 0 0px;
   padding-top: 112px;
   padding-bottom: 96px;
 }
-.portfolio__heading h2{
-}
-.portfolio__content {
- 
-}
 .portfolio__blok {
   margin-top: 99px;
 }
@@ -210,5 +205,26 @@ margin: 91px 0 0px;
 }
 /*----------------------PORTFOLIO_END------------------------*/
 /*----------------------CONTACTS_BEGIN-----------------------*/
-
+.contacts-block {
+  margin-top: 114px;
+}
+.contacts__text {
+  text-align: center;
+}
+.contacts__buttom{
+  text-align: center;
+}
+.contacts__buttom button{
+  background:black;
+  color: white;
+  height: 42px;
+  width: 180px;
+  border-radius: 21px;
+  border: none;
+  font-family: Gilroy-Medium;
+  font-size: 18px;
+  line-height: 22px;
+}
+.contacts__messengers {
+}
 /*----------------------CONTACTS_END-------------------------*/
