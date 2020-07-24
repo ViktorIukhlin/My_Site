@@ -51,6 +51,11 @@ const addSkills = (svgies, stars, parent) => {
     svgies.forEach((item, ir) => {
         let starsblock = '';
         let starslist = '';
+        if(item == ""){
+        starsblock += `
+                <div class="skills__logo"></div>
+                <div class="skills__name"></div>
+        `;}else{
         starsblock += `
                 <div class="skills__logo">
                     <img src="src/img/icons/${item}.svg" alt="${item}" class="skills__svg">
@@ -58,12 +63,10 @@ const addSkills = (svgies, stars, parent) => {
                 <div class="skills__name">
                     <p>${item}</p>
                 </div>
-        `;
+        `;}
         for(let i = 0; i < 5 ; i++){
             if(stars[ir] == ''){
-                starslist += `
-                    <img src="" alt="" class="skills__star"></img>
-                    `;
+                starslist = false;
                     break;
             }
             if(i < stars[ir]){
@@ -75,9 +78,12 @@ const addSkills = (svgies, stars, parent) => {
                     <img src="src/img/Star.svg" alt="star" class="skills__star">
             `;}
         }
-        starsblock += `<div class="skills__stars">
-        ${starslist}
-        </div>`;
+        if(starslist == false){
+            starsblock += `<div class="skills__stars"></div>`;
+        }else{
+            starsblock += `<div class="skills__stars">
+            ${starslist}
+        </div>`;}
         parent.innerHTML += `<div class="skills__box">
         ${starsblock}
         </div>`;
