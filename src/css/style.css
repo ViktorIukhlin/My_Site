@@ -35,10 +35,13 @@ body{
   line-height: 22px;
   font-weight: normal;
   color: #070707;
+  min-width: 980px;
 }
 .wrapper{
   max-width: 940px;
   margin: 0 auto;
+  min-height: 100%;
+  overflow: hidden;
 }
 p {
   margin-top: 1em; 
