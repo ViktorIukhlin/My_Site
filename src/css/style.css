@@ -224,9 +224,26 @@ margin: 91px 0 0px;
   }
 }
 @media (max-width: 767px){
-  .skills__box {
-    flex-basis: 100%;
+  .skills__container{
+    justify-content: center;
   }
+  .skills__box {
+    margin-bottom: 30px;
+    flex-basis: 33.3333%;
+  }
+  .skills__logo img{
+     max-width: 100%;
+  }
+  .skills__stars {
+    display: flex;
+    justify-content: space-around;
+    padding: 5px;
+  }
+  .skills__star{
+    padding: 0;
+    width: 14%;
+  }
+  
 }
 /*------------------------SKILLS_END-------------------------*/
 /*---------------------PORTFOLIO_BEGIN-----------------------*/
