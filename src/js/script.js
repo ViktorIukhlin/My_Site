@@ -13,10 +13,8 @@ const dataBase = {
         "Git",
         "GitHub",
         "IELTS",
-        "",
         "Visual Studio",
-        "Visual Studio Code",
-        ""
+        "Visual Studio Code"
     ],
     stars: [
         3,
@@ -27,10 +25,8 @@ const dataBase = {
         4,
         4,
         3,
-        '',
         4,
-        4,
-        ''
+        4
     ],
     //PORTFOLIO
     screens: [

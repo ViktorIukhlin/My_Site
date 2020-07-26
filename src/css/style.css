@@ -35,18 +35,7 @@ body{
   line-height: 22px;
   font-weight: normal;
   color: #070707;
-  min-width: 980px;
 }
-.wrapper{
-  max-width: 940px;
-  margin: 0 auto;
-  min-height: 100%;
-  overflow: hidden;
-}
-p {
-  margin-top: 1em; 
-  margin-bottom: 2em; 
- }
 a{
   text-decoration: none;
 }
@@ -63,17 +52,31 @@ a.anchor {
   visibility: hidden;
 }
 /*-----------------------PRE_CONFIG_END-----------------------*/
-/*------------------------HEADER_BEGIN------------------------*/
-.container{
-  border-bottom: 1px solid #828282;
-  transform: matrix(1, 0, 0, 1, 0, 0);
+.wrapper{
+  display: flex;
+  min-height: 100%;
+  overflow: hidden;
+  flex-direction: column;
 }
+.container{
+  max-width: 1445px;
+  margin: 0 auto;
+  padding: 0 250px;
+}
+@media (max-width: 1445px){
+  .container{
+    max-width: 1005px;
+    margin: 0 auto;
+    padding: 0 30px;
+  }
+}
+/*------------------------HOME_BEGIN------------------------*/
 .header-bottom-menu {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
-  margin: 32px 0;
+  padding: 32px 0;
+  border-bottom: 1px solid #828282;
 }
 .header-body-menu__links{
   font-family: Gilroy-Bold;
@@ -85,54 +88,75 @@ a.anchor {
 .header-bottom-menu__link_active{
   color: #070707;
 }
-/*-------------------------HEADER_END-------------------------*/
-/*------------------------WHOIAM_BEGIN------------------------*/
-.whoiam {
+.home__who-i-am {
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
-  align-content: flex-start;
-  margin: 30px 0 104px;
   align-items: flex-end;
+  margin: 39px 0;
 }
-.whoiam__name {
+.home__name h1{
   font-family: Gilroy-Bold;
   font-size: 47.3392px;
   line-height: 59px;
   color: #070707;
 }
-.whoiam__about {
+.home__about {
+  padding-bottom: 7px;
   color: #070707;
 }
-.whoiam__language {
+.home__language {
   display: flex;
-  transform: rotate(-90deg);
-  margin: 45px -23px;
+  transform: rotate(0.75turn);
+  margin: 34px -23px;
   font-family: Gilroy-Bold;
   font-size: 16px;
   line-height: 20px;
 }
-.whoiam__ru {
+.home__ru {
   color: #828282;
 }
-.whoiam__slesh {
+.home__slesh {
   margin: 0px 5px;
 }
-.whoiam__image {
-  margin: 30px 0 0px;
+.home__photo {
+  margin: 30px 0 104px;
   overflow: hidden;
-  height: 350px;
+  height: 387px;
 }
-.whoiam__photo{
+.home__photo-my{
   width: 100%;
   margin: -45% 0 0 0;
 }
- 
-/*------------------------WHOIAM_END-------------------------*/
+@media (max-width: 1200px){
+  .home header{
+    display: none;
+  }
+  .home__language{
+    display: none;
+  }
+  .home__who-i-am{
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .home__about p{
+    margin: 23px 0 0;
+  }
+}
+@media (max-width: 575px){
+  .container{
+    max-width: 575px;
+  }
+  .home__photo {
+    height: 100%;
+  }
+  .home__photo-my{
+    margin: 0 auto;
+  }
+}
+/*------------------------HOME_END-------------------------*/
 /*------------------------ABOUT_BEGIN------------------------*/
 .about__content {
-  width: 100%;
-  max-width: 100%;
   background: #F6F6F6;
   height: 506px;
 }
@@ -141,6 +165,18 @@ a.anchor {
   width: 485px;
   text-align: center;
   margin: 0 auto;
+}
+.about__content-text p{
+  margin-bottom: 2em;
+}
+.about__content-text h2{
+  margin-bottom: 1em;
+}
+@media (max-width: 575px){
+  .about__content-text{
+    max-width: 300px;
+    padding: 70px 0 80px;
+  }
 }
 /*-------------------------ABOUT_END-------------------------*/
 /*-----------------------SKILLS_BEGIN------------------------*/
@@ -155,7 +191,7 @@ margin: 91px 0 0px;
 .skills__container{
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
 }
 .skills__box {
   display: flex;
@@ -182,6 +218,16 @@ margin: 91px 0 0px;
 .skills__star {
   padding: 0 4px;
 }
+@media (max-width: 992px){
+  .skills__box {
+    flex-basis: 33.333%;
+  }
+}
+@media (max-width: 767px){
+  .skills__box {
+    flex-basis: 100%;
+  }
+}
 /*------------------------SKILLS_END-------------------------*/
 /*---------------------PORTFOLIO_BEGIN-----------------------*/
 .portfolio {
@@ -197,7 +243,7 @@ margin: 91px 0 0px;
   margin-top: 50px;
 }
 .portfolio__img img{
-  width: 940px;
+  max-width: 100%;
   margin-bottom: 44px;
 }
 .portfolio__link a{
@@ -214,6 +260,10 @@ margin: 91px 0 0px;
 .contacts__text {
   text-align: center;
 }
+.contacts__text p{
+  margin-top: 20px;
+  margin-bottom: 29px;
+  }
 .contacts__buttom{
   text-align: center;
 }
@@ -242,5 +292,17 @@ margin: 91px 0 0px;
   line-height: 17px;
   text-align: center;
   color: #828282;
+}
+@media (max-width: 575px){
+  .contacts__messengers{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-basis: 25%;
+    padding: 0 30px;
+  }
+  .contacts__messengers img{
+    padding: 0;
+  }
 }
 /*----------------------CONTACTS_END-------------------------*/
