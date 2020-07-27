@@ -1,7 +1,7 @@
 'use strict';
 const skills = document.querySelector('.skills__container'),
-      portfolio = document.querySelector('.portfolio__content');
-
+      portfolio = document.querySelector('.portfolio__content'),
+      burger = document.querySelector('.header');
 const dataBase = {
     //SKILS
     svgies: [
@@ -101,5 +101,16 @@ const addPortfolio = (img, url, parent) => {
         </div>`;
     });
 };
+
+burger.addEventListener('click', (event) => {
+   burger.querySelector('.header__burger').classList.toggle('active');
+   burger.querySelector('.header__menu').classList.toggle('active');
+   document.querySelector('.home__language').classList.toggle('active');
+   document.querySelector('body').classList.toggle('lock');
+});
+
+
 addSkills(dataBase.svgies, dataBase.stars, skills);
 addPortfolio(dataBase.screens, dataBase.ScreensUrl,portfolio);
+
+ 
