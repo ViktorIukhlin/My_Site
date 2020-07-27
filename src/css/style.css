@@ -225,7 +225,7 @@ a.anchor {
     position: fixed;
     transform: rotate(0.25turn);
     right: 0px;
-    bottom: 105%;
+    bottom: 110%;
     font-size: 34px;
     line-height: 42px;
     transition: all 0.3s ease 0s;
