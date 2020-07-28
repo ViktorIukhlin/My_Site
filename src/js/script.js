@@ -17,11 +17,11 @@ const dataBase = {
         "Visual Studio Code"
     ],
     stars: [
-        3,
+        4,
         4,
         4,
         2,
-        4,
+        3,
         4,
         4,
         3,
