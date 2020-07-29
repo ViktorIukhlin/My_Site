@@ -117,6 +117,7 @@ addPortfolio(dataBase.screens, dataBase.ScreensUrl,portfolio);
 
 const btnSendMessage = document.querySelector('[data-modal]'),
       modal = document.querySelector('.modal'),
+      send = document.querySelector('[data-send]'),
       closeWindow = document.querySelector('[data-close]');
 
 btnSendMessage.addEventListener('click', (e) => {
@@ -124,6 +125,10 @@ btnSendMessage.addEventListener('click', (e) => {
     modal.classList.toggle('show');
     document.body.style.overflow = 'hidden';
     document.body.style.margin = '0 16px 0 0';
+});
+send.addEventListener('click', (e) => {
+    e.preventDefault();
+    closeModal();
 });
 
 function closeModal(e) {
