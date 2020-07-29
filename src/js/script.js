@@ -113,4 +113,35 @@ burger.addEventListener('click', (event) => {
 addSkills(dataBase.svgies, dataBase.stars, skills);
 addPortfolio(dataBase.screens, dataBase.ScreensUrl,portfolio);
 
- 
+/////modal///////
+
+const btnSendMessage = document.querySelector('[data-modal]'),
+      modal = document.querySelector('.modal'),
+      closeWindow = document.querySelector('[data-close]');
+
+btnSendMessage.addEventListener('click', (e) => {
+    e.preventDefault();
+    modal.classList.toggle('show');
+    document.body.style.overflow = 'hidden';
+    document.body.style.margin = '0 16px 0 0';
+});
+
+function closeModal(e) {
+    modal.classList.toggle('show');
+    document.body.style.overflow = '';
+    document.body.style.margin = '';
+}
+
+closeWindow.addEventListener('click', closeModal);
+
+modal.addEventListener('click', (e) => {
+    if(e.target === modal) {
+        closeModal();
+    }
+});
+
+document.addEventListener('keydown', (e) => {
+    if (e.code === 'Escape' && modal.classList.contains('show')) {
+        closeModal();
+    }
+});
