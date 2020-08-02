@@ -126,11 +126,7 @@ btnSendMessage.addEventListener('click', (e) => {
     document.body.style.overflow = 'hidden';
     document.body.style.margin = '0 16px 0 0';
 });
-send.addEventListener('click', (e) => {
-    e.preventDefault();
-    closeModal();
-});
-
+ 
 function closeModal(e) {
     modal.classList.toggle('show');
     document.body.style.overflow = '';
@@ -153,12 +149,12 @@ document.addEventListener('keydown', (e) => {
 
 //Form
 
-const form = document.querySelector('form');
+const form = document.querySelector('[data-form]');
 
 const message = {
-    loading: '',
-    success: '',
-    failure: ''
+    loading: 'loading',
+    success: 'success',
+    failure: 'failure'
 };
 
 form.addEventListener('submit', (e) => {
@@ -171,8 +167,30 @@ form.addEventListener('submit', (e) => {
 
     const request = new XMLHttpRequest();
     request.open('POST', 'server.php');
-    
+    request.setRequestHeader('Content-type', 'application/json; charset=utf-8');
+    const formData = new FormData(form);
 
-})
+    const object = {};
+    formData.forEach(function(value, key){
+        object[key] = value;
+    });
+    const json = JSON.stringify(object);
+
+    request.send(json);
+
+    request.addEventListener('load', () => {
+        if(request.status === 200) {
+            console.log(request.response);
+            statusMessage.textContent = message.success;
+            form.reset();
+            setTimeout(() => {
+                statusMessage.remove();
+            }, 2000);
+        }else{
+            statusMessage.textContent = message.failure;
+        }
+    });
+
+});
 
 
