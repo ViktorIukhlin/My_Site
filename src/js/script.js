@@ -124,11 +124,14 @@ btnSendMessage.addEventListener('click', (e) => {
     e.preventDefault();
     modal.classList.toggle('show');
     document.body.style.overflow = 'hidden';
+    if(window.screen.width > 1455){
+    document.body.style.margin = '0 16px 0 0';}
 });
  
 function closeModal(e) {
     modal.classList.toggle('show');
     document.body.style.overflow = '';
+    document.body.style.margin = '';
 }
 
 closeWindow.addEventListener('click', closeModal);

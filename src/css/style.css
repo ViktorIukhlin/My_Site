@@ -437,6 +437,11 @@ margin: 91px 0 0px;
   max-height: 80vh;
   overflow-y: auto
 }
+@media (max-width: 575px){
+  .modal__content {
+    padding: 40px 0;
+  }
+}
 
 .modal__close {
   position: absolute;
