@@ -424,8 +424,7 @@ margin: 91px 0 0px;
 }
 .modal__dialog {
   max-width: 500px;
-  margin: 50% auto;
-  padding: auto 0;
+  margin: 130px auto;
 }
 .modal__content {
   position: relative;
@@ -436,6 +435,12 @@ margin: 91px 0 0px;
   border-radius: 4px;
   max-height: 80vh;
   overflow-y: auto
+}
+@media (max-width: 1400px){
+  .modal__content {
+    margin: 50% auto;
+    padding: auto 0;
+  }
 }
 @media (max-width: 575px){
   .modal__content {
