@@ -22,46 +22,50 @@
       "price": 21
     }
   ],
-  "requests": [
+  "svgies": [
     {
-      "name": "Виктор",
-      "phone": "89818371680",
-      "id": 1
+      "name":"Java Script",
+      "stars":"4"
     },
     {
-      "name": "Виктор",
-      "phone": "89818371680",
-      "id": 2
+      "name":"HTML",
+      "stars":"4"
     },
     {
-      "name": "Виктор",
-      "phone": "89818371680",
-      "id": 3
+      "name":"CSS",
+      "stars":"4"
     },
     {
-      "name": "Viktor",
-      "phone": "89818371680",
-      "id": 4
+      "name":"C++",
+      "stars":"2"
     },
     {
-      "name": "Олег",
-      "phone": "777 777 777",
-      "id": 5
+      "name":"Figma",
+      "stars":"3"
     },
     {
-      "name": "Олег",
-      "phone": "777 777 777",
-      "id": 6
+      "name":"Git",
+      "stars":"4"
     },
     {
-      "name": "we",
-      "phone": "+7",
-      "id": 7
+      "name":"GitHub",
+      "stars":"4"
     },
     {
-      "name": "Олег",
-      "phone": "77777777",
-      "id": 8
+      "name":"IELTS",
+      "stars":"3"
+    },
+    {
+      "name":"Visual Studio",
+      "stars":"4"
+    }, {
+      "name":"Visual Studio Code",
+      "stars":"4"
     }
+
+  ],
+
+  "requests": [
+
   ]
 }
