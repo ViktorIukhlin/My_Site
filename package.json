@@ -1,0 +1,28 @@
+{
+  "name": "my_site",
+  "version": "1.0.0",
+  "description": "site about me",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "json-server": "^0.16.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ViktorIukhlin/My_Site.git"
+  },
+  "keywords": [
+    "viktoriukhlin",
+    "iukhlin",
+    "mysite"
+  ],
+  "author": "Viktor Iukhlin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ViktorIukhlin/My_Site/issues"
+  },
+  "homepage": "https://github.com/ViktorIukhlin/My_Site#readme"
+}
