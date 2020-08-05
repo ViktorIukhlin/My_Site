@@ -3,95 +3,91 @@ window.addEventListener('DOMContentLoaded', () => {
     const skills = document.querySelector('.skills__container'),
         portfolio = document.querySelector('.portfolio__content'),
         burger = document.querySelector('.header');
-    const dataBase = {
-        //SKILS
-        svgies: [
-            "Java Script",
-            "HTML",
-            "CSS",
-            "C++",
-            "Figma",
-            "Git",
-            "GitHub",
-            "IELTS",
-            "Visual Studio",
-            "Visual Studio Code"
-        ],
-        stars: [
-            4,
-            4,
-            4,
-            2,
-            3,
-            4,
-            4,
-            3,
-            4,
-            4
-        ],
-        //PORTFOLIO
-        screens: [
-            "Coca Cola",
-            "Titans of cnc",
-            "Design blog"
-        ],
-        ScreensUrl: [
-            "https://www.coca-cola.ru/",
-            "https://academy.titansofcnc.com/",
-            "https://www.invisionapp.com/inside-design"
-        ]
-    };
+/////////////////////////////CLASSES//////////////////////////////
+    class Skill {
+        constructor(name, stars, parentSelector, ...classes){
+            this.name = name;
+            this.stars = stars;
+            this.classes = classes;
+            this.parent = document.querySelector(parentSelector);
+            this.starslist = this.createStarsblock();
+        }
 
-    const addSkills = (svgies, stars, parent) => {
-        parent.innerHTML = '';
-
-        svgies.forEach((item, ir) => {
-            let starsblock = '';
+        createStarsblock(){
             let starslist = '';
-            if (item == "") {
-                starsblock += `
-                <div class="skills__logo"></div>
-                <div class="skills__name"></div>
-        `;
-            } else {
-                starsblock += `
-                <div class="skills__logo">
-                    <img src="src/img/icons/${item}.svg" alt="${item}" class="skills__svg">
-                </div>
-                <div class="skills__name">
-                    <p>${item}</p>
-                </div>
-        `;
-            }
-            for (let i = 0; i < 5; i++) {
-                if (stars[ir] == '') {
-                    starslist = false;
-                    break;
-                }
-                if (i < stars[ir]) {
+            for(let i = 0; i < 5 ; i++){
+                for(let j = 0; j < this.stars ; j++){
                     starslist += `
                     <img src="src/img/StarBlack.svg" alt="star" class="skills__star">
-                `;
-                } else {
-                    starslist += `
-                    <img src="src/img/Star.svg" alt="star" class="skills__star">
-            `;
+                    `;
+                    i++;
                 }
+                starslist += `
+                    <img src="src/img/Star.svg" alt="star" class="skills__star">
+                    `;
             }
-            if (starslist == false) {
-                starsblock += `<div class="skills__stars"></div>`;
-            } else {
-                starsblock += `<div class="skills__stars">
-            ${starslist}
-        </div>`;
-            }
-            parent.innerHTML += `<div class="skills__box">
-        ${starsblock}
-        </div>`;
-        });
+            return starslist;
+        }
+
+        render(){
+            const element = document.createElement('div');
+            element.innerHTML = `
+                <div class="skills__logo">
+                    <img src="src/img/icons/${this.name}.svg" alt="${this.name}" class="skills__svg">
+                </div>
+                <div class="skills__name">
+                    <p>${this.name}</p>
+                </div>
+            `;
+            element.innerHTML += `
+                <div class="skills__stars">
+                    ${this.starslist}
+                </div>
+            `;
+            this.parent.append(element);
+        }   
+    }
+    class PartOfPortfolio {
+        constructor(name, url, parentSelector, ...classes){
+            this.name = name;
+            this.url = url;
+            this.classes = classes;
+            this.parent = document.querySelector(parentSelector);
+        }
+
+        render(){
+            const element = document.createElement('div');
+            element.classList.add('portfolio__blok');
+            this.classes.forEach(className => element.classList.add(className));
+            element.innerHTML +=`
+                <div class="portfolio__img">
+                    <img src="src/img/Sites/${this.name}.jpg" alt="${this.name}">
+                </div>
+                <div class="portfolio__link">
+                    <a href="${this.url}">${this.name} - Homepage</a>
+                </div>`;
+            this.parent.append(element);
+        }
+    }
+//////////////////////////////////////////////////////////////////////
+
+    const getResource = async (url) => {
+        const res = await fetch(url);
+
+        if (!res.ok) {
+            throw new Error(`Could not fetch ${url}, status: ${res.status}`);
+        }
+         
+        return res.json();
     };
 
-    
+    getResource('http://localhost:3000/skills')
+        .then(data => {
+            data.forEach(obj => {
+                new Skill().render();
+            });
+        });
+
     const addPortfolio = (img, url, parent) => {
         parent.innerHTML = '';
 
@@ -115,10 +111,6 @@ window.addEventListener('DOMContentLoaded', () => {
         document.querySelector('.home__language').classList.toggle('active');
         document.querySelector('body').classList.toggle('lock');
     });
-
-
-    addSkills(dataBase.svgies, dataBase.stars, skills);
-    addPortfolio(dataBase.screens, dataBase.ScreensUrl, portfolio);
 
     /////modal///////
 
@@ -166,44 +158,48 @@ window.addEventListener('DOMContentLoaded', () => {
         failure: 'failure'
     };
 
+    const postData = async (url, data) => {
+        const res = await fetch(url, {
+            method: 'POST',
+            headers: {
+                'Content-type': 'application/json'
+            },
+            body: data
+        });
+         
+        return res.json();
+    };
+
     form.addEventListener('submit', (e) => {
         e.preventDefault();
 
         let statusMessage = document.createElement('img');
         statusMessage.src = message.loading;
         statusMessage.style.cssText = `
-        display: block;
-        margin: 0 auto;
-    `;
+            display: block;
+            margin: 0 auto;
+        `;
+
         send.style.display = 'none';
         form.insertAdjacentElement('afterend', statusMessage);
 
         const formData = new FormData(form);
 
-        const object = {};
-        formData.forEach(function (value, key) {
-            object[key] = value;
-        });
+        const json = JSON.stringify(Object.fromEntries(formData.entries()));
 
-        fetch('server.php', {
-            method: 'POST',
-            headers: {
-                'Content-type': 'application/json'
-            },
-            body: JSON.stringify(object)
-        })
-            .then(data => data.text())
-            .then(data => {
-                console.log(data);
-                showThanksModal(message.success);
-                form.reset();
-                statusMessage.remove();
-            }).catch(() => {
-                showThanksModal(message.failure);
-            }).finally(() => {
-                form.reset();
-                send.style.display = 'block';
-            });
+
+        postData('http://localhost:3000/requests', json)
+        .then(data => {
+            console.log(data);
+            showThanksModal(message.success);
+            form.reset();
+            statusMessage.remove();
+        }).catch(() => {
+            showThanksModal(message.failure);
+        }).finally(() => {
+            form.reset();
+            send.style.display = 'block';
+        });
 
         function showThanksModal(message) {
             const prevModalDialog = document.querySelector('.modal__dialog');
@@ -230,10 +226,4 @@ window.addEventListener('DOMContentLoaded', () => {
             }, 2000);
         }
     });
-
-    fetch('http://localhost:3000/skills')
-        .then(data => data.json())
-        .then(res => console.log(res));
-
-
 });
