@@ -3,7 +3,7 @@ window.addEventListener('DOMContentLoaded', () => {
     const skills = document.querySelector('.skills__container'),
         portfolio = document.querySelector('.portfolio__content'),
         burger = document.querySelector('.header');
-/////////////////////////////CLASSES//////////////////////////////
+ /////////////////////////////CLASSES//////////////////////////////
     class Skill {
         constructor(name, stars, parentSelector, ...classes){
             this.name = name;
@@ -16,11 +16,10 @@ window.addEventListener('DOMContentLoaded', () => {
         createStarsblock(){
             let starslist = '';
             for(let i = 0; i < 5 ; i++){
-                for(let j = 0; j < this.stars ; j++){
+                for( ; i < this.stars ; i++){
                     starslist += `
                     <img src="src/img/StarBlack.svg" alt="star" class="skills__star">
                     `;
-                    i++;
                 }
                 starslist += `
                     <img src="src/img/Star.svg" alt="star" class="skills__star">
@@ -31,6 +30,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
         render(){
             const element = document.createElement('div');
+            element.classList.add('skills__box');
+            this.classes.forEach(className => element.classList.add(className));
             element.innerHTML = `
                 <div class="skills__logo">
                     <img src="src/img/icons/${this.name}.svg" alt="${this.name}" class="skills__svg">
@@ -69,7 +70,7 @@ window.addEventListener('DOMContentLoaded', () => {
             this.parent.append(element);
         }
     }
-//////////////////////////////////////////////////////////////////////
+ //////////////////////////////////////////////////////////////////////
 
     const getResource = async (url) => {
         const res = await fetch(url);
@@ -83,29 +84,19 @@ window.addEventListener('DOMContentLoaded', () => {
 
     getResource('http://localhost:3000/skills')
         .then(data => {
-            data.forEach(obj => {
-                new Skill().render();
+            data.forEach(({name, stars}) => {
+                new Skill(name, stars, '.skills__container').render();
+            });
+        });
+    
+    getResource('http://localhost:3000/portfolio')
+        .then(data => {
+            data.forEach(({name, url}) => {
+                new PartOfPortfolio(name, url, '.portfolio__content').render();
             });
         });
 
-    const addPortfolio = (img, url, parent) => {
-        parent.innerHTML = '';
-
-        img.forEach((item, i) => {
-            parent.innerHTML += `<div class="portfolio__blok">
-        
-            <div class="portfolio__img">
-                <img src="src/img/Sites/${item}.jpg" alt="${item}">
-            </div>
-            <div class="portfolio__link">
-                <a href="${url[i]}">${item} - Homepage</a>
-            </div>
-
-        </div>`;
-        });
-    };
-
-    burger.addEventListener('click', (event) => {
+    burger.addEventListener('click', () => {
         burger.querySelector('.header__burger').classList.toggle('active');
         burger.querySelector('.header__menu').classList.toggle('active');
         document.querySelector('.home__language').classList.toggle('active');
