@@ -10,5 +10,5 @@ window.addEventListener('DOMContentLoaded', () => {
     burger();
     classes();
     modal();
-    form();  
+    form();
 });
