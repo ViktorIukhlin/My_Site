@@ -4,6 +4,7 @@ import form from './modules/form';
 import modal from './modules/modal';
 import customization from './modules/customization';
 import scroll from './modules/scroll';
+import speedOfScroll from './modules/speedOfScroll';
 
 window.addEventListener('DOMContentLoaded', () => {
     
@@ -13,5 +14,6 @@ window.addEventListener('DOMContentLoaded', () => {
     form();
     customization();
     scroll();
+    speedOfScroll();
 });
 
