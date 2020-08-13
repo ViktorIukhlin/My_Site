@@ -11,12 +11,12 @@ $mail->isSMTP();
 
 $mail->Host = 'smtp.mail.ru';
 $mail->SMTPAuth = true;
-$mail->Username = 'baraban.06'; // логин от вашей почты
-$mail->Password = 'igrazdiil'; // пароль от почтового ящика
+$mail->Username = 'bartfatim_bs'; // логин от вашей почты
+$mail->Password = 'Target557999768637'; // пароль от почтового ящика
 $mail->SMTPSecure = 'ssl';
 $mail->Port = '465';
 $mail->CharSet = 'UTF-8';
-$mail->From = 'baraban.06@mail.ru';
+$mail->From = 'bartfatim_bs@mail.ru';
 $mail->FromName = 'MySite';
 $mail->addAddress('bartfatim@mail.ru', 'Андрей');
 $mail->isHTML(true);

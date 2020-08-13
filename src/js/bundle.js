@@ -257,7 +257,6 @@ function form() {
 
         const json = JSON.stringify(Object.fromEntries(formData.entries()));
 
-
         postData('mail.php', json)
             .then(data => {
                 console.log(data);
