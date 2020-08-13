@@ -126,18 +126,44 @@
     <div class="modal">
         <div class="modal__dialog">
             <div class="modal__content spaceOutUp">
-                <form data-form >
+                <form data-form id="recall">
                     <div data-close class="modal__close">&times;</div>
                     <div class="modal__title">Nice to meet you</div>
-                    <input required placeholder="Your name" name="user_name" type="text" class="modal__input">
-                    <input required placeholder="Your message" name="message" type="message" class="modal__input">
-                    <button data-send type="submit" class="btn btn_dark btn_min">Send</button>
+                    <input required placeholder="Имя" name="name" type="text" class="modal__input">
+                    <input required placeholder="Телефон" name="phone" type="message" class="modal__input">
+                    <button data-send type="submit" id="submit" class="btn btn_dark btn_min">Send</button>
                 </form>
             </div>
         </div>
     </div>
 
     <script src="src/js/bundle.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        $(function () {
+            $('#recall').submit(function (e) {
+                e.preventDefault();
+                var data = $(this).serialize();
+                $.ajax({
+                    url: 'mail.php',
+                    type: 'POST',
+                    data: data,
+                    beforeSend: function () {
+                        $('#submit').next().text('Отправляю...');
+                    },
+                    success: function (res) {
+                        $('#recall').find('input').val('');
+                        $('#submit').next().html(res);
+                    },
+                    error: function () {
+                        alert('Ошибка!');
+                    }
+                });
+            });
+        });
+    </script>
+
 </body>
 
 </html>
