@@ -42,25 +42,27 @@ function form() {
         const json = JSON.stringify(Object.fromEntries(formData.entries()));
 
 
-        postData('http://localhost:3000/requests', json)
+        postData('mail.php', json)
             .then(data => {
                 console.log(data);
                 showThanksModal(message.success);
                 form.reset();
                 statusMessage.remove();
-            }).catch(() => {
+            }).catch((e) => {
                 showThanksModal(message.failure);
+                console.log(e);
             }).finally(() => {
                 form.reset();
-                send.style.display = 'block';
+                send.style.display = '';
+                statusMessage.remove();
             });
 
         function showThanksModal(message) {
+
             const prevModalDialog = document.querySelector('.modal__dialog');
 
             prevModalDialog.classList.add('hide');
-            openModal();
-
+            
             const thanksModal = document.createElement('div');
             thanksModal.classList.add('modal__dialog');
             thanksModal.innerHTML = `
@@ -69,15 +71,14 @@ function form() {
                     <div class="modal__title">${message}</div>
                 </div>
             `;
+
             document.querySelector('.modal').append(thanksModal);
+
             setTimeout(() => {
                 thanksModal.remove();
                 prevModalDialog.classList.remove('hide');
-                openModal();
-                if (modal.classList.contains('show')) {
-                    closeModal();
-                }
-            }, 2000);
+                closeModal();
+            }, 1000);
         }
     });
 }

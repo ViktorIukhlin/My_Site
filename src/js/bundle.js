@@ -258,25 +258,27 @@ function form() {
         const json = JSON.stringify(Object.fromEntries(formData.entries()));
 
 
-        postData('http://localhost:3000/requests', json)
+        postData('mail.php', json)
             .then(data => {
                 console.log(data);
                 showThanksModal(message.success);
                 form.reset();
                 statusMessage.remove();
-            }).catch(() => {
+            }).catch((e) => {
                 showThanksModal(message.failure);
+                console.log(e);
             }).finally(() => {
                 form.reset();
-                send.style.display = 'block';
+                send.style.display = '';
+                statusMessage.remove();
             });
 
         function showThanksModal(message) {
+
             const prevModalDialog = document.querySelector('.modal__dialog');
 
             prevModalDialog.classList.add('hide');
-            Object(_modal__WEBPACK_IMPORTED_MODULE_0__["openModal"])();
-
+            
             const thanksModal = document.createElement('div');
             thanksModal.classList.add('modal__dialog');
             thanksModal.innerHTML = `
@@ -285,15 +287,14 @@ function form() {
                     <div class="modal__title">${message}</div>
                 </div>
             `;
+
             document.querySelector('.modal').append(thanksModal);
+
             setTimeout(() => {
                 thanksModal.remove();
                 prevModalDialog.classList.remove('hide');
-                Object(_modal__WEBPACK_IMPORTED_MODULE_0__["openModal"])();
-                if (modal.classList.contains('show')) {
-                    Object(_modal__WEBPACK_IMPORTED_MODULE_0__["closeModal"])();
-                }
-            }, 2000);
+                Object(_modal__WEBPACK_IMPORTED_MODULE_0__["closeModal"])();
+            }, 1000);
         }
     });
 }
@@ -324,7 +325,7 @@ function openModal() {
 
 function closeModal() {
     const modal = document.querySelector('.modal');
-    modal.classList.toggle('show');
+    modal.classList.remove('show');
     document.body.style.overflow = '';
     document.body.style.margin = '';
 }
@@ -453,9 +454,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_classes__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/classes */ "./src/js/modules/classes.js");
 /* harmony import */ var _modules_form__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/form */ "./src/js/modules/form.js");
 /* harmony import */ var _modules_modal__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/modal */ "./src/js/modules/modal.js");
-/* harmony import */ var _modules_skills__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/skills */ "./src/js/modules/skills.js");
-
-
 
 
 
@@ -466,6 +464,7 @@ window.addEventListener('DOMContentLoaded', () => {
     Object(_modules_burger__WEBPACK_IMPORTED_MODULE_0__["default"])();
     Object(_modules_classes__WEBPACK_IMPORTED_MODULE_1__["default"])();
     Object(_modules_modal__WEBPACK_IMPORTED_MODULE_3__["default"])();
+    Object(_modules_form__WEBPACK_IMPORTED_MODULE_2__["default"])();
 });
 
 /***/ })

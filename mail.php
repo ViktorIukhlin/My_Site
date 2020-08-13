@@ -1,4 +1,5 @@
 <?php
+$_POST = json_decode(file_get_contents("php://input"), true);
 
 $message = "Имя: {$_POST['name']}<br>"; // добавляем имя в текст
 $message .= "Телефон: {$_POST['phone']}"; // добавляем телефон в текст
@@ -23,7 +24,7 @@ $mail->Subject = 'Message from MySite';
 $mail->Body = $message;
 
 if( $mail->send() ){
-	echo '<p style="color: green;">Ваше сообщение отправлено</p>';
+	echo json_encode(['result' => $_POST]);
 }else{
-	echo '<p style="color: red;">Ошибка!</p>';
+	echo var_dump($_POST);
 }

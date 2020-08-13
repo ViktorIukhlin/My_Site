@@ -9,7 +9,7 @@ function openModal() {
 
 function closeModal() {
     const modal = document.querySelector('.modal');
-    modal.classList.toggle('show');
+    modal.classList.remove('show');
     document.body.style.overflow = '';
     document.body.style.margin = '';
 }
