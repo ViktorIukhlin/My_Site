@@ -65,18 +65,6 @@ textarea:active {
   outline: none;
 }
 
-textarea {
-  resize: none;
-}
-
-textarea {
-  resize: vertical;
-}
-
-textarea {
-  resize: horizontal;
-}
-
 h2 {
   font-family: Gilroy-Bold;
   font-size: 34px;
@@ -171,6 +159,11 @@ a.anchor {
 
 .home__ru {
   color: #828282;
+}
+
+.home__eng {
+  color: #070707;
+  user-select: none;  
 }
 
 .home__slesh {
@@ -633,11 +626,16 @@ a.anchor {
 }
 
 textarea {
-  margin-top: 20px;
   font-family: 'Gilroy-Medium';
   font-size: 18px;
 }
-
+textarea::placeholder {
+  padding-top: 12px;
+}
+textarea:focus{
+  padding-top: 12px;
+}
+ 
 .modal .btn {
   display: block;
   width: 280px;
