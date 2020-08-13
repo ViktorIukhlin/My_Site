@@ -204,6 +204,38 @@ function clasess() {
 
 /***/ }),
 
+/***/ "./src/js/modules/customization.js":
+/*!*****************************************!*\
+  !*** ./src/js/modules/customization.js ***!
+  \*****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+function header() {
+    const links = document.querySelectorAll('[data-link]');
+    links.forEach(item => {
+
+        item.addEventListener('mouseover', () => {
+            item.classList.remove('header-bottom-menu__link');
+            item.classList.add('header-bottom-menu__link_active');
+        });
+
+        item.addEventListener('mouseout', () => {
+            item.classList.remove('header-bottom-menu__link_active');
+            item.classList.add('header-bottom-menu__link');
+        });
+    });
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (header);
+
+
+
+
+/***/ }),
+
 /***/ "./src/js/modules/form.js":
 /*!********************************!*\
   !*** ./src/js/modules/form.js ***!
@@ -384,6 +416,31 @@ const portfolio = [
 
 /***/ }),
 
+/***/ "./src/js/modules/scroll.js":
+/*!**********************************!*\
+  !*** ./src/js/modules/scroll.js ***!
+  \**********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+function scroll() {
+
+    window.addEventListener('scroll', () => {
+        if (window.pageYOffset < 100) {
+            document.querySelector('.scrollUp').classList.add('hide-slow');
+        }else{
+            document.querySelector('.scrollUp').classList.remove('hide-slow');
+        }
+    });
+
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (scroll);
+
+/***/ }),
+
 /***/ "./src/js/modules/skills.js":
 /*!**********************************!*\
   !*** ./src/js/modules/skills.js ***!
@@ -453,6 +510,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_classes__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/classes */ "./src/js/modules/classes.js");
 /* harmony import */ var _modules_form__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/form */ "./src/js/modules/form.js");
 /* harmony import */ var _modules_modal__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/modal */ "./src/js/modules/modal.js");
+/* harmony import */ var _modules_customization__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/customization */ "./src/js/modules/customization.js");
+/* harmony import */ var _modules_scroll__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/scroll */ "./src/js/modules/scroll.js");
+
+
 
 
 
@@ -464,7 +525,11 @@ window.addEventListener('DOMContentLoaded', () => {
     Object(_modules_classes__WEBPACK_IMPORTED_MODULE_1__["default"])();
     Object(_modules_modal__WEBPACK_IMPORTED_MODULE_3__["default"])();
     Object(_modules_form__WEBPACK_IMPORTED_MODULE_2__["default"])();
+    Object(_modules_customization__WEBPACK_IMPORTED_MODULE_4__["default"])();
+    Object(_modules_scroll__WEBPACK_IMPORTED_MODULE_5__["default"])();
 });
+
+
 
 /***/ })
 

@@ -20,19 +20,19 @@
                 <nav class="header__menu">
                     <ul class="header-bottom-menu">
                         <li class="header-body-menu__links">
-                            <a href="#" class="header-bottom-menu__link_active">Home</a>
+                            <a href="" data-link class="header-bottom-menu__link">Home</a>
                         </li>
                         <li class="header-body-menu__links">
-                            <a href="#about" class="header-bottom-menu__link">About me</a>
+                            <a href="#about" data-link class="header-bottom-menu__link">About me</a>
                         </li>
                         <li class="header-body-menu__links">
-                            <a href="#skills" class="header-bottom-menu__link">Skills</a>
+                            <a href="#skills" data-link class="header-bottom-menu__link">Skills</a>
                         </li>
                         <li class="header-body-menu__links">
-                            <a href="#portfolio" class="header-bottom-menu__link">Portfolio</a>
+                            <a href="#portfolio" data-link class="header-bottom-menu__link">Portfolio</a>
                         </li>
                         <li class="header-body-menu__links">
-                            <a href="#contacts" class="header-bottom-menu__link">Contacts</a>
+                            <a href="#contacts" data-link class="header-bottom-menu__link">Contacts</a>
                         </li>
                     </ul>
                 </nav>
@@ -129,18 +129,21 @@
                 <form data-form id="recall">
                     <div data-close class="modal__close">&times;</div>
                     <div class="modal__title">Nice to meet you</div>
-                    <input required placeholder="Имя" name="name" type="text" class="modal__input">
-                    <input required placeholder="Телефон" name="phone" type="message" class="modal__input">
+                    <input required placeholder="Name" name="name" type="text" class="modal__input">
+                    <input required placeholder="Mail" name="mail" type="text" class="modal__input">
+                    <textarea class="modal__input" name="message" required placeholder="Message" type="text"></textarea>
                     <button data-send type="submit" id="submit" class="btn btn_dark btn_min">Send</button>
                 </form>
             </div>
         </div>
     </div>
 
-
-    <script src="src/js/bundle.js"></script>
+    <a href="#" class="scrollUp hide-slow">
+        <i>Up</i>
+    </a>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="src/js/bundle.js"></script>
 
 </body>
 
