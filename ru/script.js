@@ -1,8 +1,8 @@
 window.addEventListener('DOMContentLoaded', () => {
 
     const skillsLogo = document.querySelectorAll('.skills__logo img'),
-        portfolioImg = document.querySelectorAll('.portfolio__img img'),
-        skillsStars = document.querySelectorAll('.skills__stars img');
+        skillsStars = document.querySelectorAll('.skills__stars img'),
+        portfolioImg = document.querySelectorAll('.portfolio__img img');
 
 
     skillsLogo.forEach(item => {
@@ -17,5 +17,5 @@ window.addEventListener('DOMContentLoaded', () => {
 
     setTimeout(() => {
         console.clear();
-    }, 200);
+    }, 1000);
 });
