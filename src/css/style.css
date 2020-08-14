@@ -377,6 +377,7 @@ a.anchor {
 
 .skills__svg {
   height: 80px;
+  max-width: 100%;
 }
 
 .skills__name {

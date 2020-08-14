@@ -16,10 +16,6 @@ const skills = [
         "stars": "2"
     },
     {
-        "name": "Figma",
-        "stars": "3"
-    },
-    {
         "name": "Git",
         "stars": "4"
     },
@@ -28,16 +24,32 @@ const skills = [
         "stars": "4"
     },
     {
-        "name": "IELTS",
+        "name": "Webpack",
         "stars": "3"
+    },
+    {
+        "name": "Figma",
+        "stars": "3"
+    },
+    {
+        "name": "PHP",
+        "stars": "1"
+    },
+    {
+        "name": "jQuery",
+        "stars": "3"
+    },
+    {
+        "name": "VS Code",
+        "stars": "4"
     },
     {
         "name": "Visual Studio",
         "stars": "4"
     },
     {
-        "name": "Visual Studio Code",
-        "stars": "4"
+        "name": "IELTS",
+        "stars": "3"
     }
 ];
 
