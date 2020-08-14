@@ -168,6 +168,7 @@ a.anchor {
 
 .home__slesh {
   margin: 0px 5px;
+  user-select: none;  
 }
 
 .home__photo {
@@ -452,20 +453,36 @@ a.anchor {
   display: block;
 }
 
-.portfolio__img img:hover {
-  transform: scale(1.2);
-}
-
 .portfolio__link a {
   text-align: center;
-  text-decoration-line: underline;
+  font-size: 20px;
   color: #070707;
-  transition: .5s;
+  display: inline-block;
+  line-height: 1;
+  text-decoration: none;
+  cursor: pointer;
+  position: relative;
 }
-.portfolio__link a:hover{
-  transition: .5s;
-  color: #828282;
+.portfolio__link a:after {
+  display: block;
+  content: "";
+  background-color: black;
+  height: 2px;
+  width: 0%;
+  left: 50%;
+  position: absolute;
+  -webkit-transition: width .3s ease-in-out;
+  -moz--transition: width .3s ease-in-out;
+  transition: width .3s ease-in-out;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  transform: translateX(-50%);
 }
+.portfolio__link a:hover:after,
+.portfolio__link a:focus:after {
+  width: 100%;
+}
+
 
 /*----------------------PORTFOLIO_END------------------------*/
 /*----------------------CONTACTS_BEGIN-----------------------*/
@@ -635,7 +652,7 @@ textarea::placeholder {
 textarea:focus{
   padding-top: 12px;
 }
- 
+
 .modal .btn {
   display: block;
   width: 280px;
@@ -722,7 +739,7 @@ textarea:focus{
 
 .hide-slow {
   transition: .4s;
-  right: -5%;
+  right: -15%;
 }
 
 .contacts__icon {
@@ -735,3 +752,21 @@ textarea:focus{
 }
 
 /*-----------------------SCROLL_END-------------------------*/
+.scrollUpForMobile {
+  display: flex;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  top: -1%;
+  right: 5%;
+  border-radius: 5px;
+  width: 40px;
+  height: 40px;
+  color: #c8bfbf;
+  background-color: #eeeaea;
+  transition: .6s;
+}
+.scrollUpForMobile_hide {
+  top: -10%;
+  transition: .6s;
+}
