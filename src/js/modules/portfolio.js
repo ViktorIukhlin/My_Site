@@ -1,7 +1,7 @@
 const portfolio = [
     {
-        "name": "Coca Cola",
-        "url": "https://www.coca-cola.ru/"
+        "name": "GitHub",
+        "url": "https://github.com/ViktorIukhlin"
     },
     {
         "name": "Titans of cnc",
