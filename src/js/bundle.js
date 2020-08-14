@@ -239,6 +239,8 @@ function customization() {
             item.classList.remove('size-up');
         });
     });
+
+
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (customization);
