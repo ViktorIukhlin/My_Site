@@ -650,12 +650,6 @@ textarea {
   font-family: 'Gilroy-Medium';
   font-size: 18px;
 }
-textarea::placeholder {
-  padding-top: 12px;
-}
-textarea:focus{
-  padding-top: 12px;
-}
 
 .modal .btn {
   display: block;
