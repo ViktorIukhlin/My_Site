@@ -163,12 +163,12 @@ a.anchor {
 
 .home__eng {
   color: #070707;
-  user-select: none;  
+  user-select: none;
 }
 
 .home__slesh {
   margin: 0px 5px;
-  user-select: none;  
+  user-select: none;
 }
 
 .home__photo {
@@ -289,11 +289,11 @@ a.anchor {
     width: 220%;
     margin-left: -150px;
   }
-   
+
   .header__menu {
     border-bottom: none;
   }
-  
+
   .home__language {
     display: flex;
     position: fixed;
@@ -319,6 +319,7 @@ a.anchor {
 }
 
 .about__content-text {
+  opacity: 0;
   padding: 120px 0;
   width: 485px;
   text-align: center;
@@ -353,6 +354,7 @@ a.anchor {
 }
 
 .skills__container {
+  opacity: 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -436,7 +438,9 @@ a.anchor {
   padding-top: 112px;
   padding-bottom: 96px;
 }
-
+.portfolio__content{
+  opacity: 0;
+}
 .portfolio__blok {
   margin-top: 99px;
 }
@@ -468,6 +472,7 @@ a.anchor {
   cursor: pointer;
   position: relative;
 }
+
 .portfolio__link a:after {
   display: block;
   content: "";
@@ -483,6 +488,7 @@ a.anchor {
   -moz-transform: translateX(-50%);
   transform: translateX(-50%);
 }
+
 .portfolio__link a:hover:after,
 .portfolio__link a:focus:after {
   width: 100%;
@@ -492,6 +498,7 @@ a.anchor {
 /*----------------------PORTFOLIO_END------------------------*/
 /*----------------------CONTACTS_BEGIN-----------------------*/
 .contacts-block {
+  opacity: 0;
   margin-top: 114px;
   margin-bottom: 120px;
 }
@@ -539,13 +546,13 @@ a.anchor {
   color: #828282;
 }
 
-.contacts__buttom button{
+.contacts__buttom button {
   transition: .6s;
 }
 
 .contacts__buttom button:hover {
   line-height: 20px;
-  color:gold;
+  color: gold;
   transform: scale(1.2);
   transition: 1s;
 }
@@ -765,7 +772,13 @@ textarea {
   background-color: #eeeaea;
   transition: .6s;
 }
+
 .scrollUpForMobile_hide {
   top: -10%;
   transition: .6s;
+}
+
+.activation {
+  opacity: 1;
+  transition: 2s;
 }
