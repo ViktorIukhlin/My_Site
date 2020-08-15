@@ -30,7 +30,7 @@ function scroll() {
             document.querySelector('.contacts-block').classList.add('activation');
         }
 
-        if(window.pageYOffset > (document.documentElement.scrollHeight*0.75) && window.screen.width < 1000){
+        if(window.pageYOffset > (document.documentElement.scrollHeight*0.725) && window.screen.width < 1000){
             document.querySelector('.contacts-block').classList.add('activation');
         }
 
