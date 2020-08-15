@@ -4,32 +4,17 @@ window.addEventListener('DOMContentLoaded', () => {
         skillsStars = document.querySelectorAll('.skills__stars img'),
         portfolioImg = document.querySelectorAll('.portfolio__img img');
 
-        const req = new Promise((resolve, reject) => {
 
-            skillsLogo.forEach(item => {
-                item.src = `../src/img/icons/${item.alt}.svg`;
-            });
-            
-            resolve();
-        }).then(() => {
-            
-            portfolioImg.forEach(item => {
-                item.src = `../src/img/Sites/${item.alt}.jpg`;
-            });
+    skillsLogo.forEach(item => {
+        item.src = `../src/img/icons/${item.alt}.svg`;
+    });
 
-        }).then(() => {
+    portfolioImg.forEach(item => {
+        item.src = `../src/img/Sites/${item.alt}.jpg`;
+    });
 
-            skillsStars.forEach(item => {
-                item.src = `../src/img/${item.alt}.svg`;
-            });
+    skillsStars.forEach(item => {
+        item.src = `../src/img/${item.alt}.svg`;
+    });
 
-        }).then(() => {
-            console.log('ok');
-             
-        });
-
-
-    // setTimeout(() => {
-    //     console.clear();
-    // }, 1000);
 });

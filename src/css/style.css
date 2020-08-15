@@ -343,6 +343,9 @@ a.anchor {
 
 /*-------------------------ABOUT_END-------------------------*/
 /*-----------------------SKILLS_BEGIN------------------------*/
+.skills{
+  opacity: 0;
+}
 .skills__heading {
   text-align: center;
   margin: 91px 0 0px;
@@ -354,7 +357,6 @@ a.anchor {
 }
 
 .skills__container {
-  opacity: 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -438,9 +440,10 @@ a.anchor {
   padding-top: 112px;
   padding-bottom: 96px;
 }
-.portfolio__content{
+.portfolio__container{
   opacity: 0;
 }
+
 .portfolio__blok {
   margin-top: 99px;
 }
@@ -780,5 +783,5 @@ textarea {
 
 .activation {
   opacity: 1;
-  transition: 2s;
+  transition: 2s linear;;
 }

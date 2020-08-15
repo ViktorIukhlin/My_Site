@@ -15,26 +15,18 @@ function scroll() {
 
         if(window.pageYOffset > 200){
             document.querySelector('.about__content-text').classList.add('activation');
-        }else if(window.pageYOffset < 200){
-            document.querySelector('.about__content-text').classList.remove('activation');
         }
 
-        if(window.pageYOffset > 800){
-            document.querySelector('.skills__container').classList.add('activation');
-        }else if(window.pageYOffset < 800){
-            document.querySelector('.skills__container').classList.remove('activation');
+        if(window.pageYOffset > 700){
+            document.querySelector('#skills').classList.add('activation');
         }
 
         if(window.pageYOffset > 2100){
-            document.querySelector('.portfolio__content').classList.add('activation');
-        }else if(window.pageYOffset < 2100){
-            document.querySelector('.portfolio__content').classList.remove('activation');
+            document.querySelector('.portfolio__container').classList.add('activation');
         }
 
         if(window.pageYOffset > 4000){
             document.querySelector('.contacts-block').classList.add('activation');
-        }else if(window.pageYOffset < 4000){
-            document.querySelector('.contacts-block').classList.remove('activation');
         }
 
     });

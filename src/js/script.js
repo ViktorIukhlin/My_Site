@@ -6,8 +6,7 @@ import customization from './modules/customization';
 import scroll from './modules/scroll';
 import speedOfScroll from './modules/speedOfScroll';
 
-window.addEventListener('DOMContentLoaded', () => {
-    
+window.addEventListener('DOMContentLoaded', () => { 
     burger();
     classes();
     modal();
