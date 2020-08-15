@@ -25,6 +25,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
         }).then(() => {
             console.log('ok');
+             
         });
 
 
