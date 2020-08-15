@@ -26,7 +26,11 @@ function scroll() {
             document.querySelector('.portfolio__container').classList.add('activation');
         }
 
-        if(window.pageYOffset > (document.documentElement.scrollHeight*0.75)){
+        if(window.pageYOffset > (document.documentElement.scrollHeight*0.75) && window.screen.width > 1000){
+            document.querySelector('.contacts-block').classList.add('activation');
+        }
+
+        if(window.pageYOffset > (document.documentElement.scrollHeight*0.75) && window.screen.width < 1000){
             document.querySelector('.contacts-block').classList.add('activation');
         }
 
