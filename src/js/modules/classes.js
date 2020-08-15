@@ -16,11 +16,11 @@ function clasess() {
             for (let i = 0; i < 5; i++) {
                 for (; i < this.stars; i++) {
                     starslist += `
-                    <img src="src/img/StarBlack.svg" alt="starBlack" class="skills__star">
+                    <img src="src/img/StarBlack.svg" alt="StarBlack" class="skills__star">
                     `;
                 }
                 starslist += `
-                    <img src="src/img/Star.svg" alt="star" class="skills__star">
+                    <img src="src/img/Star.svg" alt="Star" class="skills__star">
                     `;
             }
             return starslist;
