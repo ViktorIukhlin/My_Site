@@ -320,8 +320,8 @@ a.anchor {
 
 .about__content-text {
   opacity: 0;
-  padding: 120px 0;
-  width: 485px;
+  padding: 95px 0 0 0;
+  width: 550px;
   text-align: center;
   margin: 0 auto;
 }
