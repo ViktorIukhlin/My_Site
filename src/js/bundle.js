@@ -187,7 +187,7 @@ function clasess() {
             this.classes.forEach(className => element.classList.add(className));
             element.innerHTML += `
                 <div class="portfolio__img">
-                    <img src="src/img/Sites/${this.name}.jpg" alt="${this.name}">
+                    <img src="src/img/Sites/${this.name}.webp" alt="${this.name}">
                 </div>
                 <div class="portfolio__link">
                     <a href="${this.url}">${this.name} - Homepage</a>

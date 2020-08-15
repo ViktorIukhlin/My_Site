@@ -343,9 +343,10 @@ a.anchor {
 
 /*-------------------------ABOUT_END-------------------------*/
 /*-----------------------SKILLS_BEGIN------------------------*/
-.skills{
+.skills {
   opacity: 0;
 }
+
 .skills__heading {
   text-align: center;
   margin: 91px 0 0px;
@@ -440,7 +441,8 @@ a.anchor {
   padding-top: 112px;
   padding-bottom: 96px;
 }
-.portfolio__container{
+
+.portfolio__container {
   opacity: 0;
 }
 
@@ -672,6 +674,7 @@ textarea {
   width: 180px;
   border-radius: 21px;
   border: none;
+  transition: .6s;
 }
 
 .show {
@@ -783,5 +786,12 @@ textarea {
 
 .activation {
   opacity: 1;
-  transition: 2s linear;;
+  transition: 2s linear;
+  ;
+}
+
+#recall button:hover {
+  transform: scale(1.05);
+  transition: .6s;
+  color: gold;
 }

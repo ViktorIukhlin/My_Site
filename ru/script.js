@@ -10,7 +10,7 @@ window.addEventListener('DOMContentLoaded', () => {
     });
 
     portfolioImg.forEach(item => {
-        item.src = `../src/img/Sites/${item.alt}.jpg`;
+        item.src = `../src/img/Sites/${item.alt}.webp`;
     });
 
     skillsStars.forEach(item => {
