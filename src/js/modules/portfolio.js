@@ -4,8 +4,8 @@ const portfolio = [
         "url": "https://github.com/ViktorIukhlin"
     },
     {
-        "name": "Titans of cnc",
-        "url": "https://academy.titansofcnc.com/"
+        "name": "Food delivery",
+        "url": "https://viktoriukhlin.github.io/Food/"
     },
     {
         "name": "Design blog",
