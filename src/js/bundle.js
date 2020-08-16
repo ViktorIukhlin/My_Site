@@ -419,8 +419,8 @@ const portfolio = [
         "url": "https://viktoriukhlin.github.io/Food/"
     },
     {
-        "name": "Design blog",
-        "url": "https://www.invisionapp.com/inside-design"
+        "name": "Movies",
+        "url": "https://viktoriukhlin.github.io/Movies/"
     }
 ];
 
