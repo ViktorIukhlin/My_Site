@@ -1,1 +1,2 @@
 ru/* linguist-vendored
+*.json linguist-language=JavaScript
