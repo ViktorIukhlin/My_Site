@@ -3,3 +3,5 @@ ru/* linguist-vendored
 
 phpmailer/class.phpmailer.php* linguist-vendored
 phpmailer/class.smtp.php* linguist-vendored
+phpmailer/class.phpmaileroauth.php* linguist-vendored
+phpmailer/class.phpmaileroauthgoogle.php* linguist-vendored
