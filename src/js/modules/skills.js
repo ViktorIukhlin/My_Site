@@ -5,7 +5,7 @@ const skills = [
     },
     {
         "name": "React",
-        "stars": "4"
+        "stars": "2"
     },
     {
         "name": "HTML",
@@ -13,7 +13,7 @@ const skills = [
     },
     {
         "name": "CSS",
-        "stars": "3"
+        "stars": "4"
     },
     {
         "name": "Node.js",
