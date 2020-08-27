@@ -4,12 +4,24 @@ const skills = [
         "stars": "4"
     },
     {
+        "name": "Node.js",
+        "stars": "3"
+    },
+    {
+        "name": "React",
+        "stars": "4"
+    },
+    {
         "name": "HTML",
         "stars": "4"
     },
     {
         "name": "CSS",
-        "stars": "4"
+        "stars": "3"
+    },
+    {
+        "name": "Sass",
+        "stars": "3"
     },
     {
         "name": "C++",
