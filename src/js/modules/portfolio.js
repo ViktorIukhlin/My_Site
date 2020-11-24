@@ -1,7 +1,7 @@
 const portfolio = [
     {
-        "name": "GitHub",
-        "url": "https://github.com/ViktorIukhlin"
+        "name": "Appvelox",
+        "url": "https://viktoriukhlin.github.io/Appvelox/#/profile"
     },
     {
         "name": "Food delivery",

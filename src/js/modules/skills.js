@@ -8,6 +8,9 @@ const skills = [
         "stars": "2"
     },
     {
+        "name": "Redux"
+    },
+    {
         "name": "HTML",
         "stars": "4"
     },
@@ -16,16 +19,8 @@ const skills = [
         "stars": "4"
     },
     {
-        "name": "Node.js",
-        "stars": "2"
-    },
-    {
         "name": "Sass",
         "stars": "3"
-    },
-    {
-        "name": "C++",
-        "stars": "2"
     },
     {
         "name": "Git",
@@ -36,15 +31,30 @@ const skills = [
         "stars": "4"
     },
     {
+        "name": "GitLab"
+    },
+    {
+        "name": "BEM"
+    },
+    {
         "name": "Webpack",
         "stars": "3"
+    },
+    {
+        "name": "Gulp",
+    },
+    {
+        "name": "OData",
+    },
+    {
+        "name": "PostgreSQL",
     },
     {
         "name": "Figma",
         "stars": "3"
     },
     {
-        "name": "PHP",
+        "name": "Bootstrap",
         "stars": "1"
     },
     {
@@ -56,8 +66,8 @@ const skills = [
         "stars": "4"
     },
     {
-        "name": "Visual Studio",
-        "stars": "4"
+        "name": "C++",
+        "stars": "2"
     },
     {
         "name": "IELTS",

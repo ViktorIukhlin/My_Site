@@ -375,7 +375,7 @@ a.anchor {
 .skills__box {
   display: flex;
   flex-direction: column;
-  margin-bottom: 110px;
+  margin-bottom: 40px;
   flex-basis: 25%;
   transition: .5s;
 }
@@ -423,6 +423,7 @@ a.anchor {
 
   .skills__box {
     margin-bottom: 30px;
+    padding: 5px;
     flex-basis: 33.3333%;
   }
 
@@ -540,10 +541,10 @@ a.anchor {
   font-family: Gilroy-Medium;
   font-size: 18px;
   line-height: 22px;
+  margin-top: 40px;
 }
 
 .contacts__messengers {
-  margin-top: 85px;
   text-align: center;
 }
 

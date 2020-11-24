@@ -38,15 +38,15 @@ function clasess() {
                     <p>${this.name}</p>
                 </div>
             `;
-            element.innerHTML += `
-                <div class="skills__stars">
-                    ${this.starslist}
-                </div>
-            `;
+            // element.innerHTML += `
+            //     <div class="skills__stars">
+            //         ${this.starslist}
+            //     </div>
+            // `;
             this.parent.append(element);
         }
     }
-    skills.forEach(({name, stars}) => {
+    skills.forEach(({ name, stars }) => {
         new Skill(name, stars, '.skills__container').render();
     });
 
@@ -72,7 +72,7 @@ function clasess() {
             this.parent.append(element);
         }
     }
-    portfolio.forEach(({name, url}) => {
+    portfolio.forEach(({ name, url }) => {
         new PartOfPortfolio(name, url, '.portfolio__content').render();
     });
 }
