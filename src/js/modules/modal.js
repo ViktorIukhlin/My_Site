@@ -17,10 +17,10 @@ function closeModal() {
 function modal() {
     const modal = document.querySelector('.modal');
 
-    document.querySelector('[data-modal]').addEventListener('click', (e) => {
-        e.preventDefault();
-        openModal();
-    });
+    // document.querySelector('[data-modal]').addEventListener('click', (e) => {
+    //     e.preventDefault();
+    //     // openModal();
+    // });
 
     modal.addEventListener('click', (e) => {
         if (e.target === modal || e.target.getAttribute('data-close') == "") {
