@@ -72,7 +72,7 @@
             <div class="about__content">
                 <div class="about__content-text">
                     <h2>Обо мне</h2>
-                    <p>Привет, я - Виктор, Frontend разработчик из Санкт-Петербурга. 
+                    <p>Привет, я - Виктор, Frontend разработчик из Санкт-Петербурга.
                         Я интересуюсь програмированием и всем, </br> что связано с ним.</p>
 
                     <p>Я изучил большое количество курсов программирования </br>
@@ -110,11 +110,9 @@
                         Добро пожаловать!
                     </p>
                 </div>
-                <form action="#" class="contacts__buttom">
-                    <button data-modal>
-                        Сообщение
-                    </button>
-                </form>
+                <div class="contacts__link-cv" style="margin-bottom: 40px;">
+                    <a href="./src/Resume Viktor Iukhlin.pdf" download='Resume Viktor Iukhlin'>Загрузить резюме</a>
+                </div>
                 <div class="contacts__messengers">
                     <a href="https://www.linkedin.com/in/viktor-iukhlin/">
                         <img class="contacts__icon" src="../src/img/contacts/linkedin.svg" alt="VK">
@@ -146,7 +144,8 @@
                     <div class="modal__title">Приятно познакомиться!</div>
                     <input required placeholder="Имя" name="name" type="text" class="modal__input">
                     <input required placeholder="E-Mail" name="mail" type="text" class="modal__input">
-                    <textarea class="modal__input" name="message" required placeholder="Сообщение" type="text"></textarea>
+                    <textarea class="modal__input" name="message" required placeholder="Сообщение"
+                        type="text"></textarea>
                     <button data-send type="submit" id="submit" class="btn btn_dark btn_min">Отправить</button>
                 </form>
             </div>
