@@ -5,9 +5,9 @@
   "main": "index.js",
   "dependencies": {},
   "devDependencies": {
-    "json-server": "^0.16.1",
-    "webpack": "^4.44.1",
-    "webpack-cli": "^3.3.12"
+    "json-server": "^1.0.0-beta.3",
+    "webpack": "^5.97.1",
+    "webpack-cli": "^6.0.1"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -21,7 +21,7 @@
     "iukhlin",
     "mysite"
   ],
-  "author": "Viktor Iukhlin",
+  "author": "Viktor Iukhlin <iukhlin.v@gmail.com>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/ViktorIukhlin/My_Site/issues"
